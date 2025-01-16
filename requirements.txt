@@ -1,0 +1,4 @@
+timm >= 0.9.12
+torch >= 2.2.1
+torchvision >= 0.17.1
+pillow >= 10.1.0
