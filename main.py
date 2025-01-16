@@ -13,7 +13,7 @@ def parse_args():
     # Input and Output Paths
     parser.add_argument('--input_path', type=str, required=True, help='Path to the input video/audio/image file or folder')
     parser.add_argument('--output_path', type=str, required=True, help='Directory where results will be saved. Inference results will be saved as JSON files.')
-    parser.add_argument('--device', type=str, default='cuda', help='Set to "cuda" for GPU or "cpu"')
+    parser.add_argument('--device', type=str, default='cuda', help='Set to "cuda" for GPU or "cpu". Also supports GPU ranks such as `0`, `1`, ...')
     parser.add_argument('--model_input_size', type=int, default=384, help='Input size of the model (224 or 384)', choices=[224, 384])
     parser.add_argument('--checkpoint_path', type=str, help='Name of saved checkpoint to load weights from', default="pretrained_weights/model_v11_ViT_384_base_ckpt.pt")
     return parser.parse_args()
